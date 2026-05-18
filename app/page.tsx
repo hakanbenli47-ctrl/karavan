@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 const telefon = "0532 630 26 03";
 const whatsappNo = "905326302603";
 const konum = "İzmir / Bornova";
-const konumLink = "https://www.google.com/maps/search/?api=1&query=İzmir%20Bornova";
+const konumLink =
+  "https://www.google.com/maps/search/?api=1&query=İzmir%20Bornova";
 const instagramLink = "https://www.instagram.com/mehmetaydogdu.official";
+
 const whatsappMesaj =
   "Merhaba, Venturo Ahşap mobil ev, tiny house ve karavan modelleri hakkında bilgi almak istiyorum.";
 
@@ -118,71 +120,83 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#070b09] text-white">
       {/* HEADER */}
-      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#070b09]/80 backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#070b09]/90 backdrop-blur-2xl">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:justify-between md:px-8 md:py-4">
           <a href="#" className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#d99b52] to-[#7a4b1f] text-xl font-black text-black shadow-lg shadow-[#d99b52]/20">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#d99b52] to-[#7a4b1f] text-lg font-black text-black shadow-lg shadow-[#d99b52]/20 md:h-12 md:w-12 md:text-xl">
               V
             </div>
 
-            <div>
-              <p className="text-lg font-black tracking-wide">
+            <div className="min-w-0">
+              <p className="text-base font-black tracking-wide md:text-lg">
                 VENTURO AHŞAP
               </p>
-              <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#d9a45f]">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#d9a45f] md:text-[11px] md:tracking-[0.28em]">
                 Mobil Ev & Karavan
               </p>
             </div>
           </a>
 
-          <nav className="hidden items-center gap-8 text-sm font-semibold text-white/70 md:flex">
-            <a href="#karavan" className="transition hover:text-[#d99b52]">
-              Karavan
-            </a>
-            <a href="#tiny" className="transition hover:text-[#d99b52]">
-              Tiny House
-            </a>
-            <a href="#paketler" className="transition hover:text-[#d99b52]">
-              Paketler
-            </a>
-            <a href="#iletisim" className="transition hover:text-[#d99b52]">
-              İletişim
-            </a>
-          </nav>
+          <div className="flex w-full items-center gap-2 overflow-x-auto pb-1 md:w-auto md:overflow-visible md:pb-0">
+            <nav className="flex shrink-0 items-center gap-2 text-xs font-semibold text-white/75 md:gap-8 md:text-sm">
+              <a
+                href="#karavan"
+                className="shrink-0 rounded-full border border-white/10 px-4 py-2 transition hover:border-[#d99b52] hover:text-[#d99b52] md:border-0 md:px-0 md:py-0"
+              >
+                Karavan
+              </a>
+              <a
+                href="#tiny"
+                className="shrink-0 rounded-full border border-white/10 px-4 py-2 transition hover:border-[#d99b52] hover:text-[#d99b52] md:border-0 md:px-0 md:py-0"
+              >
+                Tiny House
+              </a>
+              <a
+                href="#paketler"
+                className="shrink-0 rounded-full border border-white/10 px-4 py-2 transition hover:border-[#d99b52] hover:text-[#d99b52] md:border-0 md:px-0 md:py-0"
+              >
+                Paketler
+              </a>
+              <a
+                href="#iletisim"
+                className="shrink-0 rounded-full border border-white/10 px-4 py-2 transition hover:border-[#d99b52] hover:text-[#d99b52] md:border-0 md:px-0 md:py-0"
+              >
+                İletişim
+              </a>
+            </nav>
 
-       <div className="hidden items-center gap-3 md:flex">
-  <a
-    href={konumLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="rounded-full border border-white/15 px-5 py-3 text-sm font-black text-white/80 transition hover:border-[#d99b52] hover:text-[#d99b52]"
-  >
-    İzmir / Bornova
-  </a>
+            <a
+              href={konumLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-xs font-black text-white/80 transition hover:border-[#d99b52] hover:text-[#d99b52] md:px-5 md:py-3 md:text-sm"
+            >
+              İzmir / Bornova
+            </a>
 
-  <a
-    href={instagramLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="rounded-full border border-[#d99b52]/40 px-5 py-3 text-sm font-black text-[#d99b52] transition hover:bg-[#d99b52] hover:text-black"
-  >
-    Instagram
-  </a>
+            <a
+              href={instagramLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 rounded-full border border-[#d99b52]/40 px-4 py-2 text-xs font-black text-[#d99b52] transition hover:bg-[#d99b52] hover:text-black md:px-5 md:py-3 md:text-sm"
+            >
+              Instagram
+            </a>
 
-  <a
-    href={whatsappLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="rounded-full bg-[#d99b52] px-5 py-3 text-sm font-black text-black shadow-xl shadow-[#d99b52]/20 transition hover:bg-[#f0b86b]"
-  >
-    WhatsApp
-  </a>
-</div>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 rounded-full bg-[#d99b52] px-4 py-2 text-xs font-black text-black shadow-xl shadow-[#d99b52]/20 transition hover:bg-[#f0b86b] md:px-5 md:py-3 md:text-sm"
+            >
+              WhatsApp
+            </a>
+          </div>
         </div>
       </header>
 
       {/* HERO */}
-      <section id="karavan" className="relative min-h-screen pt-24">
+      <section id="karavan" className="relative min-h-screen pt-36 md:pt-24">
         <div className="absolute inset-0">
           <Image
             src="/karavan.jpg"
@@ -207,14 +221,16 @@ export default function Home() {
             <div className="mb-5 inline-flex rounded-full border border-[#d99b52]/40 bg-[#d99b52]/10 px-4 py-2 text-sm font-black text-[#f3bd75]">
               Doğada özgürlük, her yerde eviniz
             </div>
-<a
-  href={konumLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white/80 backdrop-blur transition hover:border-[#d99b52] hover:text-[#d99b52]"
->
-  Konum: {konum}
-</a>
+
+            <a
+              href={konumLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white/80 backdrop-blur transition hover:border-[#d99b52] hover:text-[#d99b52]"
+            >
+              Konum: {konum}
+            </a>
+
             <h1 className="text-4xl font-black leading-tight tracking-tight md:text-7xl">
               Venturo ile
               <span className="block bg-gradient-to-r from-[#f5c77b] to-[#9f642c] bg-clip-text text-transparent">
@@ -223,9 +239,9 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 md:text-lg">
-              Karavan, tiny house ve mobil ev modellerinde doğaya uyumlu,
-              şık, dayanıklı ve kullanışlı yaşam alanları üretiyoruz. Kamp,
-              arsa, bağ evi veya özgür yaşam planınız için size özel çözümler
+              Karavan, tiny house ve mobil ev modellerinde doğaya uyumlu, şık,
+              dayanıklı ve kullanışlı yaşam alanları üretiyoruz. Kamp, arsa,
+              bağ evi veya özgür yaşam planınız için size özel çözümler
               sunuyoruz.
             </p>
 
@@ -631,10 +647,11 @@ export default function Home() {
                 belirleyelim.
               </h2>
 
-             <p className="mt-5 max-w-2xl text-base font-semibold leading-8 text-black/70">
-  İzmir Bornova merkezli üretim ve iletişim noktamızdan; arsa, kamp,
-  bağ evi, yatırım veya seyahat için en doğru modeli birlikte netleştirelim.
-</p>
+              <p className="mt-5 max-w-2xl text-base font-semibold leading-8 text-black/70">
+                İzmir Bornova merkezli üretim ve iletişim noktamızdan; arsa,
+                kamp, bağ evi, yatırım veya seyahat için en doğru modeli
+                birlikte netleştirelim.
+              </p>
             </div>
 
             <div className="flex flex-col gap-4">
@@ -653,22 +670,24 @@ export default function Home() {
               >
                 Hemen Ara: {telefon}
               </a>
+
               <a
-  href={instagramLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full border border-black/20 bg-white/30 px-8 py-4 text-center text-base font-black text-black transition hover:-translate-y-1 hover:bg-white/50"
->
-  Instagram’dan İncele
-</a>
-<a
-  href={konumLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full border border-black/20 bg-white/30 px-8 py-4 text-center text-base font-black text-black transition hover:-translate-y-1 hover:bg-white/50"
->
-  Konuma Git
-</a>
+                href={instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-black/20 bg-white/30 px-8 py-4 text-center text-base font-black text-black transition hover:-translate-y-1 hover:bg-white/50"
+              >
+                Instagram’dan İncele
+              </a>
+
+              <a
+                href={konumLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-black/20 bg-white/30 px-8 py-4 text-center text-base font-black text-black transition hover:-translate-y-1 hover:bg-white/50"
+              >
+                Konuma Git
+              </a>
             </div>
           </div>
         </div>
