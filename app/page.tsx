@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 
 const telefon = "0532 630 26 03";
 const whatsappNo = "905326302603";
+const konum = "İzmir / Bornova";
+const konumLink = "https://www.google.com/maps/search/?api=1&query=İzmir%20Bornova";
 const instagramLink = "https://www.instagram.com/mehmetaydogdu.official";
 const whatsappMesaj =
   "Merhaba, Venturo Ahşap mobil ev, tiny house ve karavan modelleri hakkında bilgi almak istiyorum.";
@@ -148,7 +150,16 @@ export default function Home() {
             </a>
           </nav>
 
-          <div className="hidden items-center gap-3 md:flex">
+       <div className="hidden items-center gap-3 md:flex">
+  <a
+    href={konumLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full border border-white/15 px-5 py-3 text-sm font-black text-white/80 transition hover:border-[#d99b52] hover:text-[#d99b52]"
+  >
+    İzmir / Bornova
+  </a>
+
   <a
     href={instagramLink}
     target="_blank"
@@ -196,7 +207,14 @@ export default function Home() {
             <div className="mb-5 inline-flex rounded-full border border-[#d99b52]/40 bg-[#d99b52]/10 px-4 py-2 text-sm font-black text-[#f3bd75]">
               Doğada özgürlük, her yerde eviniz
             </div>
-
+<a
+  href={konumLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white/80 backdrop-blur transition hover:border-[#d99b52] hover:text-[#d99b52]"
+>
+  Konum: {konum}
+</a>
             <h1 className="text-4xl font-black leading-tight tracking-tight md:text-7xl">
               Venturo ile
               <span className="block bg-gradient-to-r from-[#f5c77b] to-[#9f642c] bg-clip-text text-transparent">
@@ -613,10 +631,10 @@ export default function Home() {
                 belirleyelim.
               </h2>
 
-              <p className="mt-5 max-w-2xl text-base font-semibold leading-8 text-black/70">
-                Kullanım amacınızı yazın; arsa, kamp, bağ evi, yatırım veya
-                seyahat için en doğru modeli netleştirelim.
-              </p>
+             <p className="mt-5 max-w-2xl text-base font-semibold leading-8 text-black/70">
+  İzmir Bornova merkezli üretim ve iletişim noktamızdan; arsa, kamp,
+  bağ evi, yatırım veya seyahat için en doğru modeli birlikte netleştirelim.
+</p>
             </div>
 
             <div className="flex flex-col gap-4">
@@ -642,6 +660,14 @@ export default function Home() {
   className="rounded-full border border-black/20 bg-white/30 px-8 py-4 text-center text-base font-black text-black transition hover:-translate-y-1 hover:bg-white/50"
 >
   Instagram’dan İncele
+</a>
+<a
+  href={konumLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full border border-black/20 bg-white/30 px-8 py-4 text-center text-base font-black text-black transition hover:-translate-y-1 hover:bg-white/50"
+>
+  Konuma Git
 </a>
             </div>
           </div>
