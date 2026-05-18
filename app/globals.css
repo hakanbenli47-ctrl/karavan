@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070b09;
+  --foreground: #ffffff;
+  --gold: #d99b52;
+  --gold-light: #f0b86b;
+  --dark-green: #0f1612;
+  --soft-dark: #101711;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--gold);
+  color: #070b09;
+}
+
+/* Mobilde alttaki sabit WhatsApp butonu içeriğin üstüne binmesin */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 82px;
+  }
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070b09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d99b52;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f0b86b;
+}
